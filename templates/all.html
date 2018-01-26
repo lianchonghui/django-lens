@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Lens.Lianch - 用镜头发现美</title>
+		<title>Lens by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -17,13 +17,8 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
-
 	</head>
 	<body class="is-loading-0 is-loading-1 is-loading-2">
-
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-			<script src="{% static 'js/sosh.min.js' %}"></script>
 
 		<!-- Main -->
 			<div id="main">
@@ -31,33 +26,12 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Lens</h1>
-						<p>Watching The World Throuht My Lens. Made By <a href="http://blog.lianch.com">练崇辉</a></p>
+						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
 						<ul class="icons">
-							<!--
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-							-->
-							<li>
-								<div id="soshid"></div>
-						<script>
-						  sosh('#soshid', {
-							// 分享的链接，默认使用location.href
-							//url: '',
-            				// 分享的标题，默认使用document.title
-            				//title: '',
-            				// 分享的摘要，默认使用<meta name="description" content="">content的值
-            				//digest: '',
-            				// 分享的图片，默认获取本页面第一个img元素的src
-            				//pic: '',
-            				// 选择要显示的分享站点，顺序同sites数组顺序，
-            				// 支持设置的站点有weixin,yixin,weibo,qzone,tqq,douban,renren,tieba
-							sites: ['weibo', 'yixin', 'qzone','weixin']
-						  })
-						</script>
-							</li>
-
 						</ul>
 					</header>
 
@@ -74,36 +48,17 @@
 						{% endfor %}
 					</section>
 
-					<div>
-							{% if is_paginated %}
-							<div class="pagination-simple">
-							  <!-- 如果当前页还有上一页，显示一个上一页的按钮 -->
-							  {% if page_obj.has_previous %}
-								<a href="?page={{ page_obj.previous_page_number }}">上一页</a>
-							  {% endif %}
-							  <!-- 显示当前页面信息 -->
-							  <span class="current">第 {{ page_obj.number }} 页 / 共 {{ paginator.num_pages }} 页</span>
-							  <!-- 如果当前页还有下一页，显示一个下一页的按钮 -->
-							  {% if page_obj.has_next %}
-								<a href="?page={{ page_obj.next_page_number }}">下一页</a>
-							  {% endif %}
-							</div>
-							{% endif %}
-					</div>
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>
-									© 2017 练崇辉的Lens<br>
-									浙ICP备 15005796号-2<br>
-							</li>
-							<br><li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
 						</ul>
 					</footer>
 
 			</div>
 
 		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
 			<script src="{% static 'js/skel.min.js' %}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{% static 'js/main.js' %}"></script>

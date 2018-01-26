@@ -25,7 +25,7 @@ SECRET_KEY = '9!yphnko+bqp00dl9)2o0*q94=k&m$58su3$yfpsk%b6nr+-ft'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -128,4 +128,4 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
-SECURE_SSL_REDIRECT = True
+#SECURE_SSL_REDIRECT = True
