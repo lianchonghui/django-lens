@@ -18,9 +18,21 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+from Django.views.generic.base import RedirectView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('lens.urls')),
 ]
 
+urlpatterns += [
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'static/favicon.ico')),       
+]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
